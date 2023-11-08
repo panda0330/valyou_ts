@@ -37,3 +37,24 @@ export default function AppContextProvider({
   const [activeAccountType, setActiveAccountType] =
     useState<AccountType>('artist');
 
+  return (
+    <AppContext.Provider
+      value={{
+        isCommentBoxOpen,
+        setIsCommentBoxOpen,
+        isPromoteBoxOpen,
+        setIsPromoteBoxOpen,
+        isValyouSongDrawerOpen,
+        setIsValyouSongDrawerOpen,
+        insideDrawerStatus,
+        setInsideDrawerStatus,
+        accountSwitcherStatus,
+        setAccountSwitcherStatus,
+        activeAccountType,
+        setActiveAccountType,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
+}
